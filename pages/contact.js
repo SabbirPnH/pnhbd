@@ -15,7 +15,8 @@ const Contact = () => {
 <section className="text-gray-600 body-font relative">
   <div className="container px-5 py-8 md:py-14 mx-auto flex sm:flex-nowrap flex-wrap">
     <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
-      <iframe width="100%" height="100%" className="absolute inset-0" frameBorder="0" title="map" marginHeight="0" marginWidth="0" scrolling="no" src="https://maps.google.com/maps?q=razia%20plza&t=&z=13&ie=UTF8&iwloc=&output=embed" ></iframe>
+      {/* <iframe width="100%" height="100%" className="absolute inset-0" frameBorder="0" title="map" marginHeight="0" marginWidth="0" scrolling="no" src="https://maps.google.com/maps?q=razia%20plza&t=&z=13&ie=UTF8&iwloc=&output=embed" ></iframe> */}
+      <iframe className="absolute inset-0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d228.1501322210574!2d90.369843!3d23.8042959!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c0d154ff5095%3A0x914bd669ac3a2dab!2sPnH%20IT%20Solution!5e0!3m2!1sen!2sbd!4v1689418229460!5m2!1sen!2sbd" width="100%" height="100%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       <div className="floating-4 bg-white relative flex flex-wrap py-6 rounded shadow-2xl">
         <div className="lg:w-1/2 px-6">
           <h2 className="title-font font-semibold text-darken tracking-widest text-xs">ADDRESS</h2>

@@ -176,7 +176,7 @@ export default function Home() {
           <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
             <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-darken">About Us
             </h1>
-            <p className="mb-2 md:mb-8 leading-relaxed">In today&apos;s fast-paced and technology-driven world, the demand for skilled IT professionals continues to grow exponentially. As industries embrace digital transformation, there is an increasing need for individuals equipped with the knowledge and expertise to navigate complex technological landscapes. IT institutes play a pivotal role in bridging this skills gap by providing specialized training and education in the field of information technology. In this article, we will explore the significance of IT institutes in shaping the future of education and empowering aspiring professionals to thrive in the digital age. </p>
+            <p className="mb-2 md:mb-8 leading-relaxed text-justify">PnH Corporation started its operation from 2013 at Mirpur, Dhaka but acquired the trade license from Bangladesh govt. in 2015. Since its inception PnH has worked to ensure a stable position in the ICT market of domestic & international area. We serve instant result oriented Digital Marketing Services, Dynamic Software and Hardware solutions across a wide range of industries and qualifications..... </p>
             <div className="flex justify-center">
               <Link href={'/about'}><button className="flex mx-auto mb-8 text-white bg-darken border-0 py-2 px-8 focus:outline-none hover:bg-light rounded text-lg transition ease-in-out delay-150 hover:scale-[1.1] duration-300 ...">Read More</button></Link>
             </div>
@@ -215,7 +215,7 @@ export default function Home() {
             <div data-aos="flip-right" data-aos-duration="1500" className="lg:w-1/2 md:w-full px-8 py-4 text-center">
               <Image width={50} height={50} src="/settings.gif" alt="seo" />
               <h2 className="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">Digital Marketing</h2>
-              <p className="leading-relaxed text-base text-justyfy mb-4">Digital marketing services encompass a wide range of strategies and activities aimed at promoting businesses online. Some common digital marketing services: Search engine optimization(SEO), Social Media Marketing(SMM), Email Marketing, Google Analytics. </p>
+              <p className="leading-relaxed text-base text-justify mb-4">Digital marketing services encompass a wide range of strategies and activities aimed at promoting businesses online. Some common digital marketing services: Search engine optimization(SEO), Social Media Marketing(SMM), Email Marketing, Google Analytics. </p>
             </div>
           </div>
           <Link href={urls.it}><button className="flex mx-auto mt-2 mb-5 text-white bg-darken border-0 py-2 px-8 focus:outline-none hover:bg-light rounded text-lg transition ease-in-out delay-150 hover:scale-[1.1] duration-300 ...">View More</button></Link>
@@ -331,7 +331,7 @@ export default function Home() {
           </div>
           <div data-aos="fade-right" data-aos-duration="1000" className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
             <h1 className="text-2xl font-semibold title-font mb-2 text-orange-500 ">CEO MESSAGE</h1>
-            <p className="mb-8 leading-relaxed">I am thrilled to address you as the CEO of PNH IT Solution. It is with great pride and excitement that I reflect on our journey so far and look forward to the future ahead.....
+            <p className="mb-8 leading-relaxed text-justify">I am thrilled to address you as the CEO of PNH IT Solution. It is with great pride and excitement that I reflect on our journey so far and look forward to the future ahead.....
             </p>
             <div className="flex w-full md:justify-start justify-center items-end">
               <Link href="/about"><button className="inline-flex text-white bg-darken border-0 py-2 px-6 focus:outline-none hover:bg-light rounded text-lg transition ease-in-out delay-150 hover:scale-[1.1] duration-300 ...">Read More</button></Link>

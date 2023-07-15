@@ -8,7 +8,7 @@
 @layer components {
     
 .bg-bg{
-background-color:#f5fbff;
+background-color:#e5f5ff;
 }    
 .floating { 
     animation-name: floating; 

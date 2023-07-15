@@ -23,8 +23,12 @@ const About = () => {
           </div>
           <div data-aos="fade-right" data-aos-duration="1000" className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
             <h1 className="text-2xl font-medium title-font mb-2 text-darken">ABOUT US</h1>
-            <p className="mb-8 leading-relaxed text-justify">PnH Corporation started its operation from 2013 at Mirpur, Dhaka but acquired the trade license from Bangladesh govt. in 2015. Since its inception PnH has worked to ensure a stable position in the ICT market of domestic & international area. We serve instant result oriented Digital Marketing Services, Dynamic Software and Hardware solutions across a wide range of industries and qualifications. PnH Corporation delivers forehanded and comprehensive training services to enhance skill resources in Bangladesh. Our quick growth is testament to our hard work ability and desire to achieve the best possible result of our customer. Our highly qualified developers & engineers are capable to execute a wide range of software development projects & different types of Hardware & Network troubleshoot by using popular development technology.
+            <p className="mb-8 leading-relaxed text-justify">PnH Corporation started its operation from 2013 at Mirpur, Dhaka but acquired the trade license from Bangladesh govt. in 2015. Since its inception PnH has worked to ensure a stable position in the ICT market of domestic & international area. We serve instant result oriented Digital Marketing Services, Dynamic Software and Hardware solutions across a wide range of industries and qualifications.
+            <br /><br />
+             PnH Corporation delivers forehanded and comprehensive training services to enhance skill resources in Bangladesh. Our quick growth is testament to our hard work ability and desire to achieve the best possible result of our customer. Our highly qualified developers & engineers are capable to execute a wide range of software development projects & different types of Hardware & Network troubleshoot by using popular development technology.
+            <br /><br />
               We have developed some Dynamic application like- Membership Database management application, Travel Agency management application, Endoscopy machine image processing software, School Management System, Accounts software, Hospital Management system, Point of sell, Inventory Management System, Payroll management system, Recruitment agency management system, Online News Portal, E-Commerce Site etc.  Beside this we are working on IT automation services like People Counting system, Attendance Management system & IP Camera Video Surveillance Solution etc.
+              <br /><br />
               A highly skilled management team and well-qualified Board of Directors manage the affairs of the company. All projects in turnkey basis are managed and controlled by a strong project management team comprising of a Project Director, Technical Director, Project Manager and Coordinator.
 
               Recently, PnH Corporation has started their Digital Online Multimedia project to stay connected consistently with the new information technology era.
@@ -41,9 +45,9 @@ const About = () => {
             <p className="mb-8 leading-relaxed text-justify">I am thrilled to address you as the CEO of PnH Corporation. It is with great pride and excitement that I reflect on our journey so far and look forward to the future ahead.
 
               At our company, we are passionate about leveraging technology to empower businesses and drive their success in this digital era. Our mission is to be your trusted partner, providing innovative IT solutions that transform your operations, enhance efficiency, and fuel growth.
-
+              <br /><br />
               To our dedicated team, I express my sincere appreciation for your unwavering commitment and relentless pursuit of excellence. Your expertise, passion, and collaborative spirit are the pillars of our company&apos;s success. I am proud to lead such a talented team and excited to embark on new adventures together.
-
+              <br /><br />
               Thank you for being a part of our journey. We are excited about the opportunities that lie ahead and look forward to serving you with unwavering dedication and a commitment to excellence.
               <br /><br />
               Sincerely,
@@ -51,7 +55,7 @@ const About = () => {
               Iftekhar Mahmud
             </p>
           </div>
-          <div data-aos="flip-up" data-aos-duration="1500" className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-4 md:mb-0 ">
+          <div data-aos="flip-up" data-aos-duration="1500" className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-4 md:mb-0 order-first md:order-last">
             <Image width={800} height={600} className="shadow-lg rounded" alt="ceo of pnh" src="/ceo.png" />
           </div>
         </div>
@@ -77,10 +81,10 @@ const About = () => {
           <div data-aos="fade-right" data-aos-duration="1000" className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left items-center text-center">
             <h1 className="text-2xl font-medium title-font mb-2 text-darken">Our Vision</h1>
             <p className="mb-8 leading-relaxed text-justify">
-            The company aims to provide a significant contribution in Bangladeshi IT industry, assist local people to enhance their IT skill and knowledge and develop dynamic software products and services that make any business more convenient and more secure.
+              The company aims to provide a significant contribution in Bangladeshi IT industry, assist local people to enhance their IT skill and knowledge and develop dynamic software products and services that make any business more convenient and more secure.
             </p>
           </div>
-          <div data-aos="flip-up" data-aos-duration="1500" className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-4 md:mb-0 ">
+          <div data-aos="flip-up" data-aos-duration="1500" className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-4 md:mb-0 order-first md:order-last">
             <Image width={1024} height={680} className="shadow-lg rounded" alt="ceo of pnh" src="/vision.png" />
           </div>
         </div>
