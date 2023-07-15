@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    
+.bg-bg{
+background-color:#f5fbff;
+}    
+.floating { 
+    animation-name: floating; 
+    animation-duration: 3s; 
+    animation-iteration-count: infinite; 
+    animation-timing-function: ease-in-out;
+} 
+
+@keyframes floating { 
+    0% { transform: translate(0, 0px); } 
+    50% { transform: translate(0, 8px); } 
+    100% { transform: translate(0, -0px); }  
+} 
+.floating-4 { 
+    animation-name: floating; 
+    animation-duration: 4s; 
+    animation-iteration-count: infinite; 
+    animation-timing-function: ease-in-out;
+} 
+@keyframes floating-4 { 
+    0% { transform: translate(0, 0px); } 
+    50% { transform: translate(0, 8px); } 
+    100% { transform: translate(0, -0px); }  
+}
+.text-darken {
+    color:#03326e ;
+}
+.text-light{
+    color:#076295 ;
+}
+.bg-darken{
+background-color:#03326e ;
+}
+.bg-light{
+background-color:#076295 ;
+}
+  }
