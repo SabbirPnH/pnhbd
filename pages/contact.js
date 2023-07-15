@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import data from '../components/Data'
 
 
 
@@ -18,13 +19,13 @@ const Contact = () => {
       <div className="floating-4 bg-white relative flex flex-wrap py-6 rounded shadow-2xl">
         <div className="lg:w-1/2 px-6">
           <h2 className="title-font font-semibold text-darken tracking-widest text-xs">ADDRESS</h2>
-          <p className="mt-1">184, Razia Plaza, Senpara Parbata. Mirpur-10, Dhaka-1216, Bangladesh</p>
+          <p className="mt-1"><a href={data.settings.addressLink}>{data.settings.address}</a></p>
         </div>
         <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
           <h2 className="title-font font-semibold text-darken tracking-widest text-xs">EMAIL</h2>
-          <a className="text-indigo-500 leading-relaxed">info@pnhbd.com</a>
+          <a href={data.settings.emailLink} className="text-indigo-500 leading-relaxed">{data.settings.email}</a>
           <h2 className="title-font font-semibold text-darken tracking-widest text-xs mt-4">PHONE</h2>
-          <p className="leading-relaxed">(+880)1873-003333</p>
+          <a href={data.settings.mobileLink} className="text-indigo-500 leading-relaxed">{data.settings.mobile}</a>
         </div>
       </div>
     </div>

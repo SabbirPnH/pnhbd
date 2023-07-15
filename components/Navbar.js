@@ -8,6 +8,7 @@ import Image from 'next/image';
 import { HiOutlineMenuAlt3 } from 'react-icons/Hi';
 import {IoLogoFacebook, IoLogoYoutube, IoLogoLinkedin, IoLogoWhatsapp} from 'react-icons/Io'
 import { MdClose } from 'react-icons/Md';
+import data from './Data';
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
 const Navbar = () => {
@@ -73,10 +74,10 @@ const Navbar = () => {
 
             <div className='absolute top-6 md:top-5  flex justify-center right-[50%] left-[50%] lg:right-[50%] lg:left-[50%] md:left-[30%] md:right-[70%] item-center text-center '>
                 <div className='flex flex-row justify-center md:justify-start md:ml-28 lg:justify-center lg:ml-0  md:mr-12 lg:mr-0 item-center text-center space-x-3 '>
-                    <a href='https://www.facebook.com/pnhbd'><IoLogoFacebook className='text-2xl md:text-3xl text-[#0268e2]'/></a>
-                    <a href='https://api.whatsapp.com/send?phone=8801914436613'><IoLogoWhatsapp className='text-2xl md:text-3xl text-[#43a736]'/></a>
-                    <a href='#'><IoLogoYoutube className='text-2xl md:text-3xl text-red-600'/></a>
-                    <a href='#'><IoLogoLinkedin className='text-2xl md:text-3xl text-darken'/></a>
+                    <a href={data.social.facebook}><IoLogoFacebook className='text-2xl md:text-3xl text-[#0268e2]'/></a>
+                    <a href={data.social.whatsapp}><IoLogoWhatsapp className='text-2xl md:text-3xl text-[#43a736]'/></a>
+                    <a href={data.social.youtube}><IoLogoYoutube className='text-2xl md:text-3xl text-red-600'/></a>
+                    <a href={data.social.linkedin}><IoLogoLinkedin className='text-2xl md:text-3xl text-darken'/></a>
                     </div>
                 </div>
         
