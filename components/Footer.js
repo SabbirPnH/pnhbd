@@ -21,11 +21,20 @@ const Footer = () => {
           <li>
             <a href={data.urls.it}  className="text-white hover:text-[#4abdff]">PnH IT Solution</a>
           </li>
-          <li>
+          {/* <li>
             <a href={data.urls.consultancy}  className="text-white hover:text-[#4abdff]">PnH Overseas</a>
           </li>
           <li>
             <a  href={data.urls.study} className="text-white hover:text-[#4abdff]">Study Abroad Consultation</a>
+          </li> */}
+          <li>
+            <a href={'http://pnhdns.com'}  className="text-white hover:text-[#4abdff]">PnH eCom</a>
+          </li>
+          <li>
+            <a href={'http://webhost.pnhdns.com'}  className="text-white hover:text-[#4abdff]">PnH WebHost</a>
+          </li>
+          <li>
+            <a href={'http://school.pnhdns.com'}  className="text-white hover:text-[#4abdff]">PnH eSchool</a>
           </li>
           <li>
             <a href={data.urls.shop}  className="text-white hover:text-[#4abdff]">Easy Sale Bd</a>
