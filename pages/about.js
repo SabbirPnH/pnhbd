@@ -23,7 +23,7 @@ const About = () => {
           </div>
           <div data-aos="fade-right" data-aos-duration="1000" className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
             <h1 className="text-2xl font-medium title-font mb-2 text-darken">ABOUT US</h1>
-            <p className="mb-8 leading-relaxed text-justify">PnH Corporation started its operation from 2013 at Mirpur, Dhaka but acquired the trade license from Bangladesh govt. in 2015. Since its inception PnH has worked to ensure a stable position in the ICT market of domestic & international area. We serve instant result oriented Digital Marketing Services, Dynamic Software and Hardware solutions across a wide range of industries and qualifications.
+            <p className="mb-8 leading-relaxed text-justify">PnH Corporation started its operation from 2019 at Mirpur, Dhaka but acquired the trade license from Bangladesh govt. in 2020. Since its inception PnH has worked to ensure a stable position in the ICT market of domestic & international area. We serve instant result oriented Digital Marketing Services, Dynamic Software and Hardware solutions across a wide range of industries and qualifications.
             <br /><br />
              PnH Corporation delivers forehanded and comprehensive training services to enhance skill resources in Bangladesh. Our quick growth is testament to our hard work ability and desire to achieve the best possible result of our customer. Our highly qualified developers & engineers are capable to execute a wide range of software development projects & different types of Hardware & Network troubleshoot by using popular development technology.
             <br /><br />

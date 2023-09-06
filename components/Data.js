@@ -1,7 +1,7 @@
 const data = {
     urls: {
         it: "http://it.pnhbd.com",
-        consultancy: "http://consultancy.pnhbd.com",
+        consultancy: "http://school.pnhdns.com",
         study: "http://morsuraha.com",
         shop: "http://easysalebd.com"
     },
