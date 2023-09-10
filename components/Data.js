@@ -6,7 +6,7 @@ const data = {
         shop: "http://easysalebd.com"
     },
     social: {
-        facebook: "http://facebook.com/pnhbd",
+        facebook: "http://facebook.com/pnhitsolution",
         messenger: "http://m.me/pnhbd",
         whatsapp: "http://wa.me/8801873003333",
         instagram: "#",
