@@ -8,9 +8,9 @@ const data = {
     social: {
         facebook: "http://facebook.com/pnhitsolution",
         messenger: "http://m.me/pnhbd",
-        whatsapp: "http://wa.me/8801873003333",
+        whatsapp: "http://wa.me/8801914436613",
         instagram: "#",
-        linkedin: "#",
+        linkedin: "https://linkedin.com/company/pnh-corporation",
         youtube: "#",
         twitter: "#"
     },
@@ -140,7 +140,7 @@ const data = {
         {
             id: 17,
             title: "Shadow Hoddings Ltd.",
-            description: "very well known real estate company",
+            description: "Very well known real estate company",
             image: "/shadow.jpg",
             url: "https://shadowholdingsltd.com/",
         },
