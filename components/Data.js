@@ -1,14 +1,16 @@
 const data = {
     urls: {
-        it: "http://it.pnhbd.com",
-        consultancy: "http://school.pnhdns.com",
-        study: "http://morsuraha.com",
-        shop: "http://easysalebd.com"
+        it: "https://it.pnhbd.com",
+        tour: "https://consultancy.pnhbd.com",
+        consultancy: "https://consultancy.pnhbd.com",
+        morsuraha: "https://morsuraha.com",
+        newstime: "https://newstime24.net",
+        shop: "https://easysalebd.com"
     },
     social: {
-        facebook: "http://facebook.com/pnhitsolution",
-        messenger: "http://m.me/pnhbd",
-        whatsapp: "http://wa.me/8801914436613",
+        facebook: "https://facebook.com/pnhitsolution",
+        messenger: "https://m.me/pnhbd",
+        whatsapp: "https://wa.me/8801914436613",
         instagram: "#",
         linkedin: "https://linkedin.com/company/pnh-corporation",
         youtube: "#",
@@ -44,7 +46,7 @@ const data = {
             title: "Uddokta Group",
             description: "Best possible services and products to customers for attaining their full satisfaction",
             image: "/uddokta.jpg",
-            url: "http://uddoktagroupbd.com/",
+            url: "https://uddoktagroupbd.com/",
         },
         {
             id: 4,

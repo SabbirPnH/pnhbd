@@ -98,7 +98,13 @@ export default function Home() {
           <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-4 md:mb-0 items-center text-center">
             <h1 data-aos="fade-right" data-aos-duration="500" className="title-font text-5xl md:text-6xl mb-4 font-semibold text-orange-400">PnH <span className='text-white font-medium'> Corporation</span>
             </h1>
-            <p className="mb-4 leading-relaxed text-white"><a href={urls.it}>IT Solution</a> | <a href={urls.shop}>Online Shop</a> </p>
+            <p className="mb-4 leading-relaxed text-white">
+              <a href={urls.it} target='_blank' rel="noopener noreferrer">IT Solution</a> | 
+              <a href={urls.consultancy} target='_blank'rel="noopener noreferrer">Consultancy</a> | 
+              <a href={urls.morsuraha} target='_blank'rel="noopener noreferrer">Mor Suraha</a> | 
+              <a href={urls.newstime} target='_blank'rel="noopener noreferrer">NewsTime</a> | 
+              <a href={urls.shop} target='_blank'rel="noopener noreferrer">EasySale</a> 
+            </p>
             <div className="flex justify-center">
               <Link href={'/about'}><button data-aos="fade-right" data-aos-duration="500" className="floating-4 inline-flex text-white bg-orange-500 border-0 py-2 px-6 focus:outline-none hover:bg-orange-400 rounded text-lg  hover:scale-[1.1] duration-300 ...">Explore Us</button></Link>
             </div>
@@ -108,12 +114,12 @@ export default function Home() {
               <div>
                 <Image className='rounded-md' width={720} height={600} src="/s1.png" alt="" />
               </div>
-              {/* <div>
+              <div>
                 <Image className='rounded-md' width={720} height={600} src="/s2.png" alt="" />
               </div>
               <div>
                 <Image className='rounded-md' width={720} height={600} src="/s3.png" alt="" />
-              </div> */}
+              </div>
               <div>
                 <Image className='rounded-md' width={720} height={600} src="/s4.png" alt="" />
               </div>
@@ -124,41 +130,59 @@ export default function Home() {
 
       {/* shape devider */}
 
-      {/* <div className="relative w-full h-20 -mt-8 md:-mt-24">
-   <Image layout='fill' src="/divider.svg" alt="" />
-</div> */}
+      <div className="relative w-full h-20 -mt-8 md:-mt-24">
+        <Image layout='fill' src="/divider.svg" alt="" />
+      </div>
 
 
 
       {/* sister concern */}
       <section className=" text-gray-600 body-font pb-16 mt-[15.2px]  bg-bg font-eng ">
-        <div className="container px-5 py-0 mx-auto ">
+        <div className="container px-5 py-0 mx-auto">
           <div className="flex flex-wrap -m-4 text-center justify-center">
             <div data-aos="flip-left" data-aos-duration="500" className="p-4 md:w-1/3 sm:w-1/2 w-full  md:-mt-16">
               <Link href={urls.it} target='_blank'><div className="cursor-pointer shadow-xl bg-it bg-cover bg-center  px-4 py-6 rounded-lg hover:scale-[1.1] duration-1000 ">
                 <Image src="/computer.gif" alt="computer" width={50} height={50} />
-                <h2 className="title-font font-medium text-2xl text-red-500 hover:text-gray-900 duration-500">PnH It Solution</h2>
+                <h2 className="title-font font-medium text-2xl text-red-500 hover:text-gray-900 duration-500">PnH IT Solution</h2>
                 <p className="leading-relaxed text-light">Design and Develop</p>
               </div></Link>
             </div>
-            {/* <div data-aos="flip-left" data-aos-duration="500" className="p-4 md:w-1/4 sm:w-1/2 w-full md:-mt-16">
-              <Link href={urls.consultancy}><div className="cursor-pointer shadow-xl bg-overseas bg-cover bg-center  px-4 py-6 rounded-lg hover:scale-[1.1] duration-1000 ">
+            <div data-aos="flip-left" data-aos-duration="500" className="p-4 md:w-1/3 sm:w-1/2 w-full md:-mt-16">
+              <Link href={urls.tour}><div className="cursor-pointer shadow-xl bg-overseas bg-cover bg-center  px-4 py-6 rounded-lg hover:scale-[1.1] duration-1000 ">
                 <Image src="/travel.gif" alt="travel" width={50} height={50} />
                 <h2 className="title-font font-medium text-2xl text-red-500 hover:text-gray-900 duration-500">PnH Overseas</h2>
                 <p className="leading-relaxed text-light">Tour and Travels</p>
               </div></Link>
             </div>
-            <div data-aos="flip-left" data-aos-duration="500" className="p-4 md:w-1/4 sm:w-1/2 w-full md:-mt-16">
-              <Link href={urls.study}><div className="cursor-pointer shadow-xl bg-study bg-cover bg-center px-4 py-6 rounded-lg hover:scale-[1.1] duration-1000 ">
+            <div data-aos="flip-left" data-aos-duration="500" className="p-4 md:w-1/3 sm:w-1/2 w-full md:-mt-16">
+              <Link href={urls.consultancy}><div className="cursor-pointer shadow-xl bg-study bg-cover bg-center px-4 py-6 rounded-lg hover:scale-[1.1] duration-1000 ">
                 <Image src="/book.gif" alt="book" width={50} height={50} />
-                <h2 className="title-font font-medium text-2xl text-red-500 hover:text-gray-900 duration-500">Study </h2>
+                <h2 className="title-font font-medium text-2xl text-red-500 hover:text-gray-900 duration-500">PnH Consultancy</h2>
                 <p className="leading-relaxed text-light">Study Abroad Consultation</p>
               </div></Link>
-            </div> */}
+            </div>
+          </div>
+        </div>
+        <div className="container px-5 py-0 mx-auto mt-20">
+          <div className="flex flex-wrap -m-4 text-center justify-center">
+            <div data-aos="flip-left" data-aos-duration="500" className="p-4 md:w-1/3 sm:w-1/2 w-full md:-mt-16">
+              <Link href={urls.morsuraha}><div className="cursor-pointer shadow-xl bg-study bg-cover bg-center px-4 py-6 rounded-lg hover:scale-[1.1] duration-1000 ">
+                <Image src="/book.gif" alt="book" width={50} height={50} />
+                <h2 className="title-font font-medium text-2xl text-red-500 hover:text-gray-900 duration-500">Mor Suraha</h2>
+                <p className="leading-relaxed text-light">Language Institute</p>
+              </div></Link>
+            </div>
+            <div data-aos="flip-left" data-aos-duration="500" className="p-4 md:w-1/3 sm:w-1/2 w-full md:-mt-16">
+              <Link href={urls.newstime}><div className="cursor-pointer shadow-xl bg-overseas bg-cover bg-center  px-4 py-6 rounded-lg hover:scale-[1.1] duration-1000 ">
+                <Image src="/travel.gif" alt="travel" width={50} height={50} />
+                <h2 className="title-font font-medium text-2xl text-red-500 hover:text-gray-900 duration-500">NewsTime24.net</h2>
+                <p className="leading-relaxed text-light">Online Newspaper</p>
+              </div></Link>
+            </div>
             <div data-aos="flip-left" data-aos-duration="500" className="p-4 md:w-1/3 sm:w-1/2 w-full md:-mt-16">
               <Link href={urls.shop}><div className="cursor-pointer shadow-xl bg-shop bg-cover bg-center  px-4 py-6 rounded-lg hover:scale-[1.1] duration-1000 ">
                 <Image src="/cart.gif" alt="cart" width={50} height={50} />
-                <h2 className="title-font font-medium text-2xl text-red-500 hover:text-gray-900 duration-500">Online Shop</h2>
+                <h2 className="title-font font-medium text-2xl text-red-500 hover:text-gray-900 duration-500">EasySale BD</h2>
                 <p className="leading-relaxed text-light">E-commerce</p>
               </div></Link>
             </div>
@@ -239,13 +263,13 @@ export default function Home() {
             <Image data-aos="zoom-in" data-aos-duration="500" width={4} height={2} src="/line.svg" alt="" />
             <p className="md:w-1/2 mt-4 mx-auto text-center leading-relaxed text-sm">We process all types of visas according to the clients demands. Here is the clients demand rate.  </p>
 
-            {/* <div className="flex justify-between mb-3 mt-5">
+            <div className="flex justify-between mb-3 mt-5">
               <span className="text-base font-medium text-darken dark:text-darken">Student Visa</span>
               <span className="text-sm font-medium text-darken dark:text-darken">90%</span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-200">
               <div className="bg-light h-2.5 rounded-full w-[90%]" ></div>
-            </div> */}
+            </div>
             <div className="flex justify-between mb-3 mt-5">
               <span className="text-base font-medium text-darken dark:text-darken">Tourist Visa</span>
               <span className="text-sm font-medium text-darken dark:text-darken">60%</span>
@@ -260,13 +284,13 @@ export default function Home() {
             <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-200">
               <div className="bg-light h-2.5 rounded-full w-[50%]" ></div>
             </div>
-            {/* <div className="flex justify-between mb-3 mt-5">
+            <div className="flex justify-between mb-3 mt-5">
               <span className="text-base font-medium text-darken dark:text-darken">Work Permit Visa</span>
               <span className="text-sm font-medium text-darken dark:text-darken">10%</span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-200">
               <div className="bg-light h-2.5 rounded-full w-[10%]" ></div>
-            </div> */}
+            </div>
           </div>
 
           <div data-aos="zoom-out" data-aos-duration="3000" className="floating lg:w-2/5 md:w-1/2 w-full relative pl-2">
@@ -297,7 +321,7 @@ export default function Home() {
       <section className=" text-gray-600 body-font font-eng">
         <div className="container px-5 py-10 mx-auto">
           <div className="flex flex-wrap -mx-4 -mb-10 text-center justify-center">
-            {/* <div data-aos="flip-up" data-aos-duration="1500" className="sm:w-1/2 mb-10 px-4">
+            <div data-aos="flip-up" data-aos-duration="1500" className="sm:w-1/2 mb-10 px-4">
               <div className="rounded-lg overflow-hidden">
                 <Image alt="content" width={1200} height={501} src="/plane.gif" />
               </div>
@@ -306,7 +330,7 @@ export default function Home() {
               <Image width={150} height={20} src="/line.svg" alt="" />
               <p className="md:w-1/2 mt-1 mx-auto text-center leading-relaxed text-sm">We will provide you all services related with School Management System. We also provide free consultation and try to give you all inoformation about this.</p>
               <Link href={urls.consultancy}><button className="flex mx-auto mt-4 text-white bg-darken border-0 py-2 px-8 focus:outline-none hover:bg-light rounded text-lg transition ease-in-out delay-150 hover:scale-[1.1] duration-300 ...">Visit Now</button></Link>
-            </div> */}
+            </div>
             <div data-aos="flip-up" data-aos-duration="1500" className="sm:w-1/2 mb-10 px-4">
               <div className="rounded-lg overflow-hidden">
                 <Image alt="content" width={1200} height={501} src="/online_shop.gif" />

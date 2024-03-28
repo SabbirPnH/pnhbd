@@ -21,20 +21,20 @@ const Footer = () => {
           <li>
             <a href={data.urls.it}  className="text-white hover:text-[#4abdff]">PnH IT Solution</a>
           </li>
-          {/* <li>
-            <a href={data.urls.consultancy}  className="text-white hover:text-[#4abdff]">PnH Overseas</a>
+          <li>
+            <a href={data.urls.tour}  className="text-white hover:text-[#4abdff]">PnH Overseas</a>
           </li>
           <li>
-            <a  href={data.urls.study} className="text-white hover:text-[#4abdff]">Study Abroad Consultation</a>
-          </li> */}
-          <li>
-            <a href={'http://pnhdns.com'}  className="text-white hover:text-[#4abdff]">PnH eCom</a>
+            <a  href={data.urls.consultancy} className="text-white hover:text-[#4abdff]">Study Abroad Consultation</a>
           </li>
           <li>
-            <a href={'http://webhost.pnhdns.com'}  className="text-white hover:text-[#4abdff]">PnH WebHost</a>
+            <a href={data.urls.morsuraha}  className="text-white hover:text-[#4abdff]">Language Institute</a>
           </li>
           <li>
-            <a href={'http://school.pnhdns.com'}  className="text-white hover:text-[#4abdff]">PnH eSchool</a>
+            <a href={data.urls.newstime}  className="text-white hover:text-[#4abdff]">NewsTime</a>
+          </li>
+          <li>
+            <a href={'https://hosting.pnhdns.com'}  className="text-white hover:text-[#4abdff]">PnH WebHost</a>
           </li>
           <li>
             <a href={data.urls.shop}  className="text-white hover:text-[#4abdff]">Easy Sale Bd</a>
@@ -62,8 +62,8 @@ const Footer = () => {
   </div>
   <div className="bg-[#101218]">
     <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-      <p className="text-[#4abdff] text-sm text-center sm:text-left">© 2019-2023 PnH Corporation —
-        <a href={data.urls.it} rel="noopener noreferrer" className="text-white ml-1" target="_blank">@PnH It Solution</a>
+      <p className="text-[#4abdff] text-sm text-center sm:text-left">© 2016-{new Date().getFullYear()} PnH Corporation —
+        <a href={data.urls.it} rel="noopener noreferrer" className="text-white ml-1" target="_blank">@PnH IT Solution</a>
       </p>
       <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
         <a href={data.social.facebook} className="text-[#4abdff]">
