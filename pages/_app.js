@@ -32,7 +32,9 @@ useEffect(() => {
         progress={progress}
         onLoaderFinished={() => setProgress(0)}
       />
-  <Navbar/><Component {...pageProps}/><Footer/></>
+  <Navbar/>
+  <Component {...pageProps}/>
+  <Footer/></>
 }
 
 export default MyApp
