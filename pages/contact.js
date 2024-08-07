@@ -18,10 +18,10 @@
 
 //   const handleSubmit = (e) => {
 //     e.preventDefault();
-//     axios.post(`http://192.168.10.168/pnhbd-backend/api/contect-us-post`, post)
+//     axios.post(`https://jsonplaceholder.typicode.com/posts`, post)
 //       .then(res => {
 //         console.log(res);
-//         // Optionally, clear the form fields after successful submission
+        
 //         setPost({
 //           name: '',
 //           email: '',
@@ -101,34 +101,25 @@ import data from '../components/Data';
 import axios from 'axios';
 
 const Contact = () => {
-  const [post, setPost] = useState({
-    name: '',
-    email: '',
-    number: '',
-    message: ''
-  });
-
+const dataPost ={name:'',email:'',number:'', message:''}
+const [inputData,setInputData]=useState(dataPost)
   const handleInput = (e) => {
-    setPost({ ...post, [e.target.name]: e.target.value });
+    setInputData({ ...inputData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('/api/contact', post)
+    if (!inputData.name || !inputData.email || !inputData.number || !inputData.message) {
+      alert('Please fill in all the fields.');
+      return;
+    }
+    axios.post('https://jsonplaceholder.typicode.com/posts', inputData)
       .then(res => {
-        console.log(res.data);
+        console.log(res);
         alert('Message sent successfully!');
-        setPost({
-          name: '',
-          email: '',
-          number: '',
-          message: ''
-        });
+        setInputData(dataPost);
       })
-      .catch(error => {
-        console.error(error);
-        alert('Failed to send message');
-      });
+     
   };
 
   return (
@@ -156,26 +147,26 @@ const Contact = () => {
           </div>
 
           <div className="bg-bg lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
-            <form onSubmit={handleSubmit}>
+            <form >
               <h2 className="text-darken text-lg mb-1 font-semibold title-font">Feedback</h2>
               <p className="leading-relaxed mb-5 text-gray-600">Feel free to Contact us and share your opinion.</p>
               <div className="relative mb-4">
                 <label htmlFor="name" className="leading-7 text-sm text-gray-600">Name</label>
-                <input value={post.name} onChange={handleInput} required type="text" id="name" name="name" className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
+                <input value={inputData.name} onChange={handleInput} required type="text" id="name" name="name" className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
               </div>
               <div className="relative mb-4">
                 <label htmlFor="email" className="leading-7 text-sm text-gray-600">Email</label>
-                <input value={post.email} onChange={handleInput} type="email" id="email" name="email" className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
+                <input value={inputData.email} onChange={handleInput} type="email" id="email" name="email" className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
               </div>
               <div className="relative mb-4">
                 <label htmlFor="number" className="leading-7 text-sm text-gray-600">Mobile Number</label>
-                <input value={post.number} onChange={handleInput} required type="number" id="number" name="number" className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
+                <input value={inputData.number} onChange={handleInput} required type="number" id="number" name="number" className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
               </div>
               <div className="relative mb-4">
                 <label htmlFor="message" className="leading-7 text-sm text-gray-600">Message</label>
-                <textarea value={post.message} onChange={handleInput} id="message" name="message" className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                <textarea value={inputData.message} onChange={handleInput} id="message" name="message" className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
               </div>
-              <button type="submit" className="text-white bg-darken border-0 py-2 px-6 focus:outline-none hover:bg-light rounded text-lg">Send Message</button>
+              <button onClick={handleSubmit} type="submit" className="text-white bg-darken border-0 py-2 px-6 focus:outline-none hover:bg-light rounded text-lg">Send Message</button>
             </form>
           </div>
         </div>
@@ -185,3 +176,7 @@ const Contact = () => {
 }
 
 export default Contact;
+
+
+
+
