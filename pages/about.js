@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import Link from 'next/link'
 import Head from 'next/head'
 import AboutCard from '../components/AboutCard'
-
-
-
 
 const About = () => {
 
@@ -28,7 +24,7 @@ const About = () => {
 
 
   return (
-    <div className='overflow-x-hidden scrollbar-thin'>
+    <div className='overflow-x-hidden scrollbar-thin mt-[60px]'>
 
       <Head>
         <title>About | PnH Corporation</title>

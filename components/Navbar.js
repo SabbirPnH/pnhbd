@@ -1,130 +1,184 @@
-import React from 'react'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import Link from 'next/link'
-import { useEffect } from 'react';
-import { useState } from "react";
-import Image from 'next/image';
-import { HiOutlineMenuAlt3 } from 'react-icons/Hi';
-import {IoLogoFacebook, IoLogoYoutube, IoLogoLinkedin, IoLogoWhatsapp} from 'react-icons/Io'
-import { MdClose } from 'react-icons/Md';
-import data from './Data';
-<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
-const iconColors = ['#3b5998', '#25D366','#E72929' , '#FF0000', '#FFA500'];
+
+import React, { useState, useEffect } from "react";
+import { IoIosSearch } from "react-icons/io";
+import { FaDiscord } from "react-icons/fa";
+import { TbBrandGithubFilled } from "react-icons/tb";
+import { CiMenuFries } from "react-icons/ci";
+import { MdClose } from "react-icons/md";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Link from "next/link";
+import Image from "next/image";
+
 const Navbar = () => {
-    useEffect(() => {
-        AOS.init();
-        AOS.refresh();
-    }, []);
-    const [navbar, setNavbar] = useState(false);
-    const [menus, setMenus] = useState([]);
-    const [social,setSocial]=useState([])
-    const [itservice,setItService]=useState([])
-   
-    // social-link data
-    useEffect(() => {
-        const fetchData = async () => {
-          try {
-            const response = await fetch('https://www.admin.pnhbd.com/api/website-settings-social');
-            const data = await response.json();
-            setSocial(data); // Update state with fetched data
-          } catch (error) {
-            console.error('Error fetching data:', error);
-          }
-        };
-        fetchData();
-      }, []);
-// It Service
-      useEffect(() => {
-        const fetchData = async () => {
-          try {
-            const response = await fetch('https://www.admin.pnhbd.com/api/website-settings-info');
-            const data = await response.json();
-            setItService(data); // Update state with fetched data
-          } catch (error) {
-            console.error('Error fetching data:', error);
-          }
-        };
-        fetchData();
-      }, []);
-      // navbar menu data
-    useEffect(() => {
-        const fetchData = async () => {
-          try {
-            const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/menus`);
-            const data = await response.json();
-            setMenus(data); // Update state with fetched data
-          } catch (error) {
-            console.error('Error fetching data:', error);
-          }
-        };
-        fetchData();
-      }, []);
-   
-    return (
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+  const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
+  const [menu,setMenus]=useState([])
+  const [social,setSocial]=useState([])
+  console.log(menu)
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/menus`);
+        const data = await response.json();
+        setMenus(data); // Update state with fetched data
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+    fetchData();
+  }, []);
 
-        <nav className="overflow-x-hidden w-full bg-white sticky top-0 z-50 shadow-lg font-eng px-5 md:px-10 ">
-            <div className="justify-between  mx-auto md:items-center md:flex ">
-                <div>
-                    <div className="flex items-center justify-between py-3  md:block">
-                       {
-                            itservice.map((itLogo,id)=>(
-                                <div key={id}  className='flex flex-row'>
-                                <Link href={itLogo.logo_link}>
-                                    <Image className='cursor-pointer' src={itLogo.fav_icon} width={60} height={45} alt="navimage"/>
-                                </Link>
-                                </div>
-                                ))
-                       }
-                  
-                        <div className="md:hidden">
-                            <button
-                                className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
-                                onClick={() => setNavbar(!navbar)}
-                            >
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('https://www.admin.pnhbd.com/api/website-settings-social');
+        const data = await response.json();
+        setSocial(data); // Update state with fetched data
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+    fetchData();
+  }, []);
 
+  return (
+    <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50 p-3 ">
+      <div className="flex items-center justify-between container mx-auto">
+        <Link href='/'>
+        <Image className='cursor-pointer' src="/gif_logo.gif" width={60} height={45} alt="navimage"/>
+    </Link>
 
-                                {/* 3 line */}
+        {/* Desktop Navigation */}
+        <ul className="hidden md:flex items-center gap-6 text-lg text-[#424242]">
+         {
+            menu.map((name)=>(
+              <Link key={name.id} href={name.url}>
+                <li  className="cursor-pointer text-darken hover:text-[#32a6e0] transition-all ">
+               {name.menu_name}
+              </li>
+              </Link>
+            ))
+         }
+          {/* Dropdown Menu for Services */}
+          <li class='group max-lg:border-b max-lg:py-3 relative'>
+              <a href='javascript:void(0)'
+                class='cursor-pointer text-darken hover:text-[#32a6e0]  block'>Career<svg
+                  xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" class="ml-1 inline-block"
+                  viewBox="0 0 24 24">
+                  <path
+                    d="M12 16a1 1 0 0 1-.71-.29l-6-6a1 1 0 0 1 1.42-1.42l5.29 5.3 5.29-5.29a1 1 0 0 1 1.41 1.41l-6 6a1 1 0 0 1-.7.29z"
 
-                                {navbar ? (
-                                    <MdClose className='text-3xl text-darken' />
-                                ) : (
-                                    <HiOutlineMenuAlt3 className='text-3xl text-darken' />
-                                )}
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div
-                        className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? "block" : "hidden"
-                            }`}
-                    >
-                        <ul className="items-center justify-center space-y-8 md:flex md:space-x-8 md:space-y-0">
-                            {menus.map(menu => (
-                                <li key={menu.menu_name} className={menu.menu_name === 'Contact US' ? "floating  cursor-pointer bg-darken px-4 py-2 rounded-md text-white hover:text-orange-400" : "cursor-pointer text-darken hover:text-[#32a6e0]"} onClick={() => setNavbar(!navbar)}>
-                                    <Link href={menu.url}><a>{menu.menu_name}</a></Link>
-                                </li>
-                            ))}   
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div className='absolute top-6 md:top-5  flex justify-center right-[50%] left-[50%] lg:right-[50%] lg:left-[50%] md:left-[30%] md:right-[70%] item-center text-center '>
-                <div className='flex flex-row justify-center md:justify-start md:ml-28 lg:justify-center lg:ml-0  md:mr-12 lg:mr-0 item-center text-center space-x-3 '>   
-                {social.map((icon, id) => (
-                  <a key={id} href={icon.link} target="_blank" rel="noopener noreferrer" style={{ position: 'relative', width: '24px', height: '24px' }}>
-                    <Image src={icon.svg} alt="icon img" layout="fill" objectFit="contain" />
-                  </a>
-                ))}
-       
-                    </div>
-                </div>
-        </nav>
+                    data-name="16" data-original="#000000" />
+                </svg>
+              </a>
+              <ul
+                class='absolute  bg-white space-y-3   max-lg:top-8 -left-6 min-w-[250px] z-50 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500'>
+                <Link href="/job">
+                <li class='border-b py-2 '><button 
+                  class='cursor-pointer text-darken hover:text-[#32a6e0] block'>Apply Job</button></li>
+                </Link>
+                <Link href="/available-job">
+               <li class='border-b py-2 '><button href='javascript:void(0)'
+                  class='cursor-pointer text-darken hover:text-[#32a6e0] block'>Available Job</button></li>
+               </Link>
+             
+              </ul>
+            </li>
          
-    )
-}
+        </ul>
 
-export default Navbar
+        {/* Search & Icons */}
+        <div className="flex items-center gap-4">
+        
+          {
+            social.map((icon)=>(
+             <Link key={icon.id} href={icon.link} rel="noopener noreferrer" target="_blank">
+              <Image className="text-[1.6rem] text-[#424242] cursor-pointer text-darken hover:text-[#32a6e0] transition-all duration-500 w-10 h-10"  src={icon.svg} alt=" icon-img" width={24} height={24}/>
+             </Link>
+        
+            ))
+          }
+          {/* Mobile Menu Button */}
+          <CiMenuFries
+            className="text-[1.6rem] text-[#424242] cursor-pointer md:hidden"
+            onClick={() => setMobileSidebarOpen(true)}
+          />
+        </div>
+      </div>
+
+      {/* Mobile Sidebar */}
+      <aside
+        className={`fixed top-0 left-0 z-50 h-full w-[75%] bg-white  p-5 transition-transform duration-300 ${
+          mobileSidebarOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        {/* Sidebar Header */}
+        <div className="flex justify-between items-center mb-4">
+        <Link href='/'>
+        <Image className='cursor-pointer' src="/gif_logo.gif" width={60} height={45} alt="navimage"/>
+    </Link>
+          <MdClose
+            className="text-2xl cursor-pointer"
+            onClick={() => setMobileSidebarOpen(false)}
+          />
+        </div>
+
+        {/* Sidebar Menu Items */}
+        <ul className="flex flex-col gap-4 text-gray-700">
+        {
+            menu.map((name)=>(
+                <Link key={name.id} href={name.url}>
+                <li  onClick={() => setMobileSidebarOpen(false)} className="cursor-pointer text-darken border-b pb-1 sm:pb-0 sm:border-none hover:text-[#32a6e0] transition-all ">
+               {name.menu_name}
+              </li>
+              </Link>
+            
+            ))
+         }
+          {/* Dropdown for Mobile */}
+          <li class='group max-lg:border-b  max-lg:py-3 relative'>
+              <a href='javascript:void(0)'
+                class='cursor-pointer text-darken hover:text-[#32a6e0] lg:hover:fill-[#007bff] block'>Career<svg
+                  xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" class="ml-1 inline-block"
+                  viewBox="0 0 24 24">
+                  <path
+                    d="M12 16a1 1 0 0 1-.71-.29l-6-6a1 1 0 0 1 1.42-1.42l5.29 5.3 5.29-5.29a1 1 0 0 1 1.41 1.41l-6 6a1 1 0 0 1-.7.29z"
+                    data-name="16" data-original="#000000" />
+                </svg>
+              </a>
+              <ul
+                class='absolute  bg-white space-y-3 lg:top-5 max-lg:top-8 -left-6 min-w-[250px] z-50 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500'>
+                 <Link href="/job">
+                <li  onClick={() => setMobileSidebarOpen(false)} class='border-b py-2 '><button 
+                  class='cursor-pointer text-darken hover:text-[#32a6e0] block'>Apply Job</button></li>
+                </Link>
+               <Link href="/available-job">
+               <li  onClick={() => setMobileSidebarOpen(false)} class='border-b py-2 '><button href='javascript:void(0)'
+                  class='cursor-pointer text-darken hover:text-[#32a6e0] block'>Available Job</button></li>
+               </Link>
+               
+              </ul>
+            </li>
+         
+        </ul>
+      </aside>
+
+      {/* Overlay (closes sidebar on click) */}
+      {mobileSidebarOpen && (
+        <div
+          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-40"
+          onClick={() => setMobileSidebarOpen(false)}
+        ></div>
+      )}
+    </nav>
+  );
+};
+
+export default Navbar;
+
+

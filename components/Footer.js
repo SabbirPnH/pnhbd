@@ -6,7 +6,6 @@ import data from './Data'
 
 
 const Footer = () => {
-  
   const [footer, setFooter] = useState([]); 
   useEffect(() => {
     const fetchData = async () => {
@@ -47,7 +46,6 @@ useEffect(() => {
         footer.map((item,id)=>(
           <footer key={id} className="text-white bg-[#101218] body-font font-eng">
           <div className="container px-5 py-5 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-        
             <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
               <Link href={'/'}><a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
               <Image width={130} height={100} src={item.footer_logo} alt="" />
