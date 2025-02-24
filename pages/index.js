@@ -13,9 +13,6 @@ import data from "../components/Data";
 import { Modal } from "antd";
 import VideoGallery from "../components/VideoSlider";
 
-
-
-
 export default function Home() {
  
   const urls = data.urls;
